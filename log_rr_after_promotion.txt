@@ -1,0 +1,14 @@
+mysql> INSERT INTO  `people` (`name`,`cog_type`,`var_type`,`enn_type`) VALUES('Allan', 'NiTe','Sx-So','468');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from people;
++-------+----------+----------+----------+
+| name  | cog_type | var_type | enn_type |
++-------+----------+----------+----------+
+| Brian | FiNe     | Sp-Sx    | 469      |
+| Allan | NiTe     | Sx-So    | 468      |
+| Allan | NiTe     | Sx-So    | 468      |
++-------+----------+----------+----------+
+3 rows in set (0.00 sec)
+
+mysql> 

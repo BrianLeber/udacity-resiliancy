@@ -1,0 +1,14 @@
+SLA for the service shall be 99.9% uptime outside of planned outages.
+Maintenance windows shall be reserved between the hours of 1am-5am on:
+the first Saturday of each month.
+on Saturdays as needed.
+on any day as needed as agreed to by both parties.
+
+RTO for a single AZ, 30 minutes
+RTO for a single region, 40 minutes
+RPO for a single AZ, 35 minutes
+RPO for a single region, 45 minutes.
+
+Some services provided by third-parties may have differing SLA guarentees, as below:
+
+We are unable to guarentee service if a catastrophic event occurs, such as:

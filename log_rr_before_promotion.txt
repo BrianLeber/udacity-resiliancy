@@ -1,0 +1,41 @@
+mysql> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| innodb             |
+| mysql              |
+| performance_schema |
+| sys                |
+| udacity            |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> use udacity
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables
+    -> ;
++-------------------+
+| Tables_in_udacity |
++-------------------+
+| people            |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from people
+    -> ;
++-------+----------+----------+----------+
+| name  | cog_type | var_type | enn_type |
++-------+----------+----------+----------+
+| Brian | FiNe     | Sp-Sx    | 469      |
+| Allan | NiTe     | Sx-So    | 468      |
++-------+----------+----------+----------+
+2 rows in set (0.00 sec)
+
+mysql> INSERT INTO  `people` (`name`,`cog_type`,`var_type`,`enn_type`) VALUES('Daniel', 'TiSe','So-Sp','259');
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
+mysql>

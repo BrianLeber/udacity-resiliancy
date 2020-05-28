@@ -1,0 +1,67 @@
+mysql> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| innodb             |
+| mysql              |
+| performance_schema |
+| sys                |
+| udacity            |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> use udacity;
+Database changed
+mysql> select
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> select *;
+ERROR 1096 (HY000): No tables used
+mysql> show tables
+    -> ;
+Empty set (0.00 sec)
+
+mysql> CREATE TABLE people (name VARCHAR(50), cog_type VARCHAR(10), var_type VARCHAR(10), enn_type VARCHAR(10);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> CREATE TABLE people (name VARCHAR(50), cog_type VARCHAR(10), var_type VARCHAR(10), enn_type VARCHAR(10));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> show tables
+    -> ;
++-------------------+
+| Tables_in_udacity |
++-------------------+
+| people            |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> describe people
+    -> ;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| name     | varchar(50) | YES  |     | NULL    |       |
+| cog_type | varchar(10) | YES  |     | NULL    |       |
+| var_type | varchar(10) | YES  |     | NULL    |       |
+| enn_type | varchar(10) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> mysql> insert into people () values("brian leber", "FiNe", "Sp-Sx", "469")
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'values("brian leber", "FiNe", "Sp-Sx", "469")' at line 1
+mysql> INSERT INTO  `people` (`name`,`cog_type`,`var_type`,`enn_type`) VALUES('Brian', 'FiNe','Sp-Sx','469');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from people
+    -> ;
++-------+----------+----------+----------+
+| name  | cog_type | var_type | enn_type |
++-------+----------+----------+----------+
+| Brian | FiNe     | Sp-Sx    | 469      |
++-------+----------+----------+----------+
+1 row in set (0.00 sec)
+
+mysql> 
